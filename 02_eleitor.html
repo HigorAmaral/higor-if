@@ -4,15 +4,25 @@
     //Peça para o usuário informar a sua idade e diga, ao final do programa, se ele pode ou não votar.
 
     //ENTRADA
-const idade = Number(prompt(`Qual a sua idade?`).trim());
-
+    const idade = Number(prompt(`Qual a sua idade?`).trim());
+    const possuiTítulo = prompt("Você tem título eleitoral? (S ou N)").toUpperCase()
+        .trim();
     //PROCESSAMENTO
-if(idade >=16){
-    alert(`você pode votar!`);
-}
- else if (idade <=15){
-    alert(`Você ainda não pode votar`);
-}
+    if (possuiTítulo == "S" || possuiTítulo == "N"){
+        if (idade >= 16 && possuiTítulo == "S") {
+            alert("Você pode votar!");
+        }
+        else {
+            alert("Você não pode votar!")
+        }
+    }
+    else("Opção invalida!")
+    if (idade >= 16) {
+        alert(`você pode votar!`);
+    }
+    else if (idade <= 15) {
+        alert(`Você ainda não pode votar`);
+    }
 
     //SAÍDA
 
